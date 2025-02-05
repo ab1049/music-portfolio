@@ -26,9 +26,9 @@ const App = () => {
 
 const Home = () => {
   const songs = [
-    { title: 'Song One', src: 'song1.mp4', cover: 'cover1.jpg' },
-    { title: 'Song Two', src: 'song2.mp4', cover: 'cover2.jpg' },
-    { title: 'Song Three', src: 'song3.mp4', cover: 'cover3.jpg' },
+    { title: 'Hold for the Queen', src: 'song1.mp3', cover: 'cover1.jpg' },
+    { title: 'Enchanted Forest', src: 'song2.mp3', cover: 'cover2.jpg' },
+    { title: 'Caribbean Symphony', src: 'song3.mp3', cover: 'cover3.jpg' },
   ];
 
   return (
