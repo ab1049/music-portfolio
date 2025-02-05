@@ -1,11 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import './App.css';
+const { BrowserRouter, Route, Link, Routes } = ReactRouterDOM;
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter basename="/music-portfolio">
       <div className="min-h-screen bg-gradient-to-br from-purple-200 to-blue-200 p-6 font-cute">
         <nav className="flex justify-between items-center mb-8">
           <div className="flex items-center">
@@ -20,7 +17,7 @@ const App = () => {
           <Route path="/memelody" element={<MeMelody />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
@@ -37,10 +34,10 @@ const Home = () => {
         <div key={index} className="bg-white shadow-lg rounded-2xl p-4">
           <h2 className="text-2xl font-semibold mb-2 text-purple-700">{song.title}</h2>
           <img src={song.cover} alt={`${song.title} Cover`} className="w-full h-48 object-cover rounded-xl mb-4" />
-          <video controls className="w-full rounded-xl">
-            <source src={song.src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <audio controls className="w-full rounded-xl">
+            <source src={song.src} type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       ))}
     </div>
